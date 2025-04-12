@@ -1,5 +1,4 @@
 import React from "react";
-//import Delete from "./Delete";
 
 function ExpenseList({expenses,searchTerm}){
     const filteredExpenses = expenses.filter((expense) =>
@@ -7,8 +6,6 @@ function ExpenseList({expenses,searchTerm}){
         expense.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         expense.category.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
-
 
     return(
         <div className="col-span-2">

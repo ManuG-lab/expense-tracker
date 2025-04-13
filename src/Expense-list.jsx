@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function ExpenseList({expenses,searchTerm, setExpenses}){
+function ExpenseList({expenses,searchTerm,}){
     const filteredExpenses = expenses.filter((expense) =>
         expense.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         expense.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -22,7 +22,6 @@ function ExpenseList({expenses,searchTerm, setExpenses}){
                 </tr>
             </thead>
             <tbody>
-                {/* Map through the expenses array and display each expense */}
                 {filteredExpenses.map((expense, index) => (
                     <tr key={index}>
                         <td className="px-14 py-2">{expense.name}</td>

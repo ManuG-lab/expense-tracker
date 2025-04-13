@@ -1,6 +1,7 @@
 import React from "react";
 
-function ExpenseList({expenses,searchTerm}){
+
+function ExpenseList({expenses,searchTerm, setExpenses}){
     const filteredExpenses = expenses.filter((expense) =>
         expense.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         expense.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -29,6 +30,7 @@ function ExpenseList({expenses,searchTerm}){
                         <td className="px-14 py-2">{expense.category}</td>
                         <td className="px-14 py-2">{expense.amount}</td>
                         <td className="px-14 py-2">{expense.date}</td>
+                        
                     </tr>
                 ))}
             </tbody>

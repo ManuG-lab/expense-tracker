@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import ExpenseList from "./Expense-list";
 import Search from "./Search";
 
+
 function Form(){
     const [amount, setAmount] = useState("");
     const [expenses, setExpenses] = useState([]);

@@ -13,4 +13,5 @@ function Search({searchTerm, setSearchTerm}){
         </div>
     )
 }
+
 export default Search;
